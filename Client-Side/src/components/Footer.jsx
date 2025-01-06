@@ -200,7 +200,7 @@ const Footer = () => {
                         transition-all duration-300
                     "
           >
-            © 2024 VisaFlow. Effortless Visa Applications, Anytime, Anywhere ❤️
+            © 2025 VisaFlow. Effortless Visa Applications, Anytime, Anywhere ❤️
           </p>
         </div>
       </div>

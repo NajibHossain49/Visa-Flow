@@ -52,7 +52,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-blue-100 via-purple-100 to-indigo-200 shadow-sm relative">
+    <nav className="bg-gradient-to-r from-blue-100 via-purple-100 to-indigo-200 shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Decorative Wave Background */}
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 opacity-80"></div>
@@ -70,23 +70,25 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation (Large Screens) */}
-          <div className="hidden lg:flex space-x-4 items-center">
-            {NavLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-blue-600 bg-blue-50 px-3 py-2 rounded-lg flex items-center transition-all duration-300 ease-in-out hover:bg-blue-50 hover:shadow-md active"
-                    : "text-gray-700 hover:text-blue-600 px-3 py-2 rounded-lg flex items-center transition-all duration-300 ease-in-out hover:bg-blue-50 hover:shadow-md"
-                }
-              >
-                {link.icon}
-                <span className="font-medium">{link.label}</span>
-              </NavLink>
-            ))}
-          </div>
+          {/* Desktop Navigation (Large Screens) - Only shown when user is logged in */}
+          {user && (
+            <div className="hidden lg:flex space-x-4 items-center">
+              {NavLinks.map((link) => (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-blue-600 bg-blue-50 px-3 py-2 rounded-lg flex items-center transition-all duration-300 ease-in-out hover:bg-blue-50 hover:shadow-md active"
+                      : "text-gray-700 hover:text-blue-600 px-3 py-2 rounded-lg flex items-center transition-all duration-300 ease-in-out hover:bg-blue-50 hover:shadow-md"
+                  }
+                >
+                  {link.icon}
+                  <span className="font-medium">{link.label}</span>
+                </NavLink>
+              ))}
+            </div>
+          )}
 
           {/* User Section for Large Screens */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -178,20 +180,22 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Navigation Links */}
-            <div className="space-y-2">
-              {NavLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="text-gray-800 hover:bg-blue-50 block px-4 py-3 rounded-lg flex items-center text-lg transition-colors duration-200"
-                  onClick={toggleMenu}
-                >
-                  {link.icon}
-                  <span className="ml-3">{link.label}</span>
-                </Link>
-              ))}
-            </div>
+            {/* Navigation Links - Only shown when user is logged in */}
+            {user && (
+              <div className="space-y-2">
+                {NavLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="text-gray-800 hover:bg-blue-50 block px-4 py-3 rounded-lg flex items-center text-lg transition-colors duration-200"
+                    onClick={toggleMenu}
+                  >
+                    {link.icon}
+                    <span className="ml-3">{link.label}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
 
             {/* User Section */}
             <div className="mt-8 border-t border-gray-200 pt-6">

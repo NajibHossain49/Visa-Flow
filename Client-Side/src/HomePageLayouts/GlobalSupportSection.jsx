@@ -113,11 +113,11 @@ const GlobalSupportSection = () => {
         </div>
 
         <div className="mt-16">
-          <Link to="/">
+          <Link to="/my-visa-applications">
             <button className="px-10 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 
               text-white font-bold text-lg hover:from-cyan-600 hover:to-indigo-700 
               transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              Start Your Journey
+              My Applications
             </button>
           </Link>
         </div>

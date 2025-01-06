@@ -10,21 +10,21 @@ const HomeSlider = () => {
       title: "Explore Global Opportunities",
       subtitle: "Simplifying Your International Travel and Visa Processes",
       buttonText: "Start Your Journey",
-      buttonLink: "/",
+      buttonLink: "/all-visas", // Route for initial journey
     },
     {
       image: "/travel-banner-2.jpg",
       title: "Discover New Destinations",
       subtitle: "Comprehensive Visa Solutions for Every Traveler",
       buttonText: "View Available Visas",
-      buttonLink: "/",
+      buttonLink: "/my-added-visas", // Route for visa listings
     },
     {
       image: "/travel-banner-3.jpg",
       title: "Your Trusted Visa Partner",
       subtitle: "Fast, Reliable, and Efficient Visa Application Services",
       buttonText: "Learn More",
-      buttonLink: "/",
+      buttonLink: "/all-visas", // Route for company information
     },
   ];
 
@@ -74,12 +74,10 @@ const HomeSlider = () => {
           </div>
 
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-teal-400 max-w-3xl px-4">
-            {/* Use useTypewriter for title */}
             <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
               <span>
                 {slide.title && (
                   <span>
-                    {/* Typewriter effect applied here */}
                     <Typewriter
                       words={[slide.title]}
                       loop={false}
@@ -106,7 +104,6 @@ const HomeSlider = () => {
         </div>
       ))}
 
-      {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 
@@ -124,7 +121,6 @@ const HomeSlider = () => {
         <ChevronRight className="text-white" size={32} />
       </button>
 
-      {/* Slide Indicators */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {sliderData.map((_, index) => (
           <button
