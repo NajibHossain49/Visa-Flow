@@ -8,6 +8,7 @@ const Layout = () => {
     <div className="flex flex-col min-h-screen">
       <header>
         <Navbar />
+        <div className="h-20"></div>
       </header>
       <main className="flex-grow">
         <Outlet /> {/* Dynamic content will be rendered here */}
