@@ -87,6 +87,30 @@ The Visa Navigator Portal aims to simplify the visa application process by provi
 
 ---
 
+## ⚙️ Installation and Setup
+
+To get started with the project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/NajibHossain49/VisaFlow-A-Visa-Navigator-Portal.git
+
+   cd VisaFlow-A-Visa-Navigator-Portal
+   
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
 ## npm Packages
 - **react-router-dom**: Routing in React.
 - **react-toastify**: Toast notifications.
