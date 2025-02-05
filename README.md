@@ -87,6 +87,15 @@ The Visa Navigator Portal aims to simplify the visa application process by provi
 
 ---
 
+## npm Packages
+- **react-router-dom**: Routing in React.
+- **react-toastify**: Toast notifications.
+- **react-rating-stars-component**: Book rating functionality.
+- **dotenv**: Secure environment variable management.
+- **jsonwebtoken**: Token-based authentication.
+- **express**: Backend framework.
+- **mongoose**: MongoDB object modeling.
+- **cors**: Handling cross-origin requests.
 
 
 ---
